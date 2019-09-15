@@ -12,6 +12,6 @@ This repository contains the source code of the [Continuous Development with Jav
 | Minikube | v1.3.1 |
 | docker | 19.09.2 |
 | Jib | 1.6.0 |
-| Skaffold | v0.22.0 |
+| Skaffold | v0.38.0 |
 | kubectl | v1.15.3 |
 | helm | v2.13.0 |
