@@ -6,13 +6,12 @@ This repository contains the source code of the [Continuous Development with Jav
 
 | software| version|
 |---|---|
-| OS | Mac OS X 10.14.3 x86_64 |
-| JVM | 1.8.0_144 |
+| OS | Ubuntu 18.04.3 LTS |
+| JVM | 1.8.0_131 |
 | Gradle wrapper | 4.10 |
-| Docker Desktop | 2.0.0.3 (31259) |
-| Minikube | v0.28.2 |
-| docker | 18.09.2 |
-| Jib | 1.0.0 |
+| Minikube | v1.3.1 |
+| docker | 19.09.2 |
+| Jib | 1.6.0 |
 | Skaffold | v0.22.0 |
-| kubectl | v1.10.11 |
-| helm | v2.12.3 |
+| kubectl | v1.15.3 |
+| helm | v2.13.0 |
