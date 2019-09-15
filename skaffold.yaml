@@ -1,4 +1,5 @@
-apiVersion: skaffold/v1beta4
+---
+apiVersion: skaffold/v1beta13
 kind: Config
 build:
   local:
@@ -6,13 +7,25 @@ build:
   artifacts:
     - image: com.github.pozo/spring-boot-jib
       jibGradle: {}
-     # jibMaven: {}
+
+test:
+  - image: com.github.pozo/spring-boot-jib
+    structureTests:
+      - './structure-test/*'
+
+# https://github.com/GoogleContainerTools/skaffold/issues
+# https://skaffold.dev/docs/how-tos/deployers/#deploying-with-helm
+# https://dev.to/pozo/continuous-development-with-java-and-kubernetes-3d08
 deploy:
-  helm:
+  helm:  #  image configuration uses the syntax IMAGE-NAME.repository=IMAGE-REPOSITORY, IMAGE-NAME.tag=IMAGE-TAG.
+    # explicitRegistry: true  #  separates image.registry to the image config syntax. Useful for some charts e.g. postgresql.
     releases:
       - name: spring-boot-jib
         chartPath: helm
+        # imageStrategy:
+        #   helm: {}
         values:
           image.repository: com.github.pozo/spring-boot-jib
         setValues:
           image.tag: ""
+# https://github.com/GoogleContainerTools/skaffold/issues/2630
