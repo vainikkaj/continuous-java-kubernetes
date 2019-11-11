@@ -8,6 +8,6 @@ commandTests:
     args: ["-version"]
     expectedError:
       - "OpenJDK Runtime Environment"
-      - "1.8.0_222-8u222-b10-1~deb9u1-b10"
+      - "1.8.0_232-8u232-b09-1~deb9u1-b09"
       - "OpenJDK 64-Bit Server VM"
-      - "build 25.222-b10, mixed mode"
+      - "build 25.232-b09, mixed mode"
