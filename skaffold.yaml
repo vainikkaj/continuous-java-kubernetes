@@ -14,6 +14,9 @@ test:
       - ./structure-test/*
 deploy:
   helm:
+    flags:
+      upgrade:
+        - "--install"
     releases:
       - name: spring-boot-jib
         chartPath: helm

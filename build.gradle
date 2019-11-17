@@ -1,5 +1,5 @@
 plugins {
-    id 'com.google.cloud.tools.jib' version '1.6.0'
+    id 'com.google.cloud.tools.jib' version '1.8.0'
     id 'org.springframework.boot' version '2.1.2.RELEASE'
     id 'java'
 }
@@ -19,7 +19,8 @@ jib {
         image = 'com.github.pozo/spring-boot-jib'
     }
     container {
-        useCurrentTimestamp = true
+        // useCurrentTimestamp = true
+        creationTime = 'USE_CURRENT_TIMESTAMP'
         ports = ['55000', '5005']
         jvmFlags = [
                 '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'
